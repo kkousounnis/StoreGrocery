@@ -28,8 +28,8 @@ public class ProcessesedProductListDTO {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("ProcessesedProductListDTO{processedShoppingList=").append(processedShoppingList);
-        sb.append(", amount=").append(amount);
+        sb.append("").append(processedShoppingList);
+        sb.append(", Total amount=").append(amount);
         sb.append('}');
         return sb.toString();
     }

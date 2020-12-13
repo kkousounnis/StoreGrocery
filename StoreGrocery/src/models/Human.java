@@ -33,6 +33,8 @@ public class Human implements IHuman {
 
     @Override
     public void pays(ProcessesedProductListDTO processesedShoppingLIst) {
+        System.out.println("Your Shopping List:");
+        System.out.println(processesedShoppingLIst);
         System.out.println("Successfull payment!!!!");
         
     }
@@ -44,9 +46,7 @@ public class Human implements IHuman {
         for (ProductDTO shoppinglist : shoppingList) {
             for (int i = 0; i < store.getProducts().size(); i++) {
                 if (shoppinglist.getProduct().equals(store.getProducts().get(i))) {
-                    System.out.print(shoppinglist.getProduct());
-                    System.out.print("+");
-                    System.out.println(store.getProducts().get(i));
+                    
                     listproductsrequested.add(shoppinglist);
 
                 }

@@ -67,7 +67,7 @@ public class Product {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Product{name=").append(name);
+        sb.append(" {name=").append(name);
         sb.append(", price=").append(price);
         sb.append(", unit=").append(unit);
         sb.append('}');

@@ -61,7 +61,6 @@ public class GroceryStore implements IProductDTO {
                     new ProcessedProductDTO(productprocess.getProduct(),
                             productprocess.getQuantity()));
         }
-        System.out.println(listprocessedproducts);
 
         return (listprocessedproducts);
     }
@@ -80,8 +79,8 @@ public class GroceryStore implements IProductDTO {
             Human CUstomer,
             List<ProcessedProductDTO> processedProductDTO,
             double totalAmount) {
-        ProcessesedProductListDTO processedproductlistdto = 
-                new ProcessesedProductListDTO(processedProductDTO, totalAmount);
+        ProcessesedProductListDTO processedproductlistdto
+                = new ProcessesedProductListDTO(processedProductDTO, totalAmount);
         return processedproductlistdto;
     }
 

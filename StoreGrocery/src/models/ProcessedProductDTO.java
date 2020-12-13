@@ -37,7 +37,7 @@ public class ProcessedProductDTO extends ProductDTO {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("ProcessedProductDTO{amount=").append(amount);
+        sb.append("amount=").append(amount);
         sb.append(", product=").append(this.getProduct());
         sb.append(", quantity=").append(this.getQuantity());
         sb.append('}');
