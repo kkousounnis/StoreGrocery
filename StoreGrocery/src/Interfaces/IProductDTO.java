@@ -9,7 +9,7 @@ import models.ProductDTO;
 public interface IProductDTO {
     //Product apples costs [1.80]*quantity [3] = 5.40
 
-    //Step2 - Grocery Employee processes order
+//    //Step2 - Grocery Employee processes order
     List<ProcessedProductDTO> processOrder(Human employee, Human customer, List<ProductDTO> shoppingList);
 
     double calculateTotal(List<ProcessedProductDTO> processedProductDTO);

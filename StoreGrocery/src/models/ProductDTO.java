@@ -1,6 +1,7 @@
 package models;
 
 import Interfaces.IProductDTO;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -65,12 +66,24 @@ public class ProductDTO implements IProductDTO{
 
     @Override
     public List<ProcessedProductDTO> processOrder(Human employee, Human customer, List<ProductDTO> shoppingList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<ProcessedProductDTO> listprocessedproducts = new ArrayList<>();
+        for (ProductDTO productprocess : shoppingList) {
+            listprocessedproducts.add(
+                    new ProcessedProductDTO(productprocess.getProduct(),
+                            productprocess.getQuantity()));
+        }
+        System.out.println(listprocessedproducts);
+
+        return (listprocessedproducts);
     }
 
     @Override
     public double calculateTotal(List<ProcessedProductDTO> processedProductDTO) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int sum = 0;
+        for (ProcessedProductDTO proccesprofuctlist : processedProductDTO) {
+            sum += sum + proccesprofuctlist.getAmount();
+        }
+        return (sum);
     }
 
     @Override

@@ -13,13 +13,28 @@ public class ProcessesedProductListDTO {
     double amount;
     
     public ProcessesedProductListDTO(){
-        double sum = 0;
-        for(ProcessedProductDTO processedshoppinglist:processedShoppingList){
-            sum+=processedshoppinglist.getAmount();
-        }
+        
     }
-    
+
+    public ProcessesedProductListDTO(List<ProcessedProductDTO> processedShoppingList, double amount) {
+        this.processedShoppingList = processedShoppingList;
+        this.amount = amount;
+    }
+       
     public double getAmount(){
         return this.amount;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("ProcessesedProductListDTO{processedShoppingList=").append(processedShoppingList);
+        sb.append(", amount=").append(amount);
+        sb.append('}');
+        return sb.toString();
+    }
+    
+    
+    
+    
 }

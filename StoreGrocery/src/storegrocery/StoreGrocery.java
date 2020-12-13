@@ -16,29 +16,27 @@ public class StoreGrocery {
         Human john = new Human("John");
         Human ann = new Human("Ann");
 
-       
-
         List<Product> products = new ArrayList<>(Arrays.asList(
                 new Product("Apple", 1.20d, "Kgr"),
                 new Product("Orange", 1.80d, "Kgr"),
                 new Product("Apple", 3.45d, "Kgr")
         ));
-                
+
         GroceryStore grocery = new GroceryStore("John's grocery", john, products);
-        
+
         List<ProductDTO> shoppingList = new ArrayList<>();
-        shoppingList.add(new ProductDTO(grocery.getProducts().get(0),2));
-        shoppingList.add(new ProductDTO(grocery.getProducts().get(1),1));
-        shoppingList.add(new ProductDTO(grocery.getProducts().get(2),3));
-        
-        ann.order(grocery, shoppingList);
-        
-        List<ProcessedProductDTO> processedproductList = grocery.processOrder(john, ann, shoppingList);
-        
+        shoppingList.add(new ProductDTO(grocery.getProducts().get(0), 2));
+        shoppingList.add(new ProductDTO(grocery.getProducts().get(1), 1));
+        shoppingList.add(new ProductDTO(grocery.getProducts().get(2), 3));
+
+        List<ProductDTO> orderlist = ann.order(grocery, shoppingList);
+
+        List<ProcessedProductDTO> processedproductList = grocery.processOrder(john, ann, orderlist);
+
         double totalAmount = grocery.calculateTotal(processedproductList);
-        
+
         ProcessesedProductListDTO processedShoppingList = grocery.payOrder(john, ann, processedproductList, totalAmount);
-        
+
         ann.pays(processedShoppingList);
     }
 
