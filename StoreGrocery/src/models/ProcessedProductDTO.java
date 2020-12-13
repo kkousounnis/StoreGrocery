@@ -20,7 +20,7 @@ public class ProcessedProductDTO extends ProductDTO{
     }
     
     public double getAmount() {
-        return Amount;
+        return this.getProduct().getPrice()*this.getQuantity();
     }
 
     public void setAmount(double Amount) {

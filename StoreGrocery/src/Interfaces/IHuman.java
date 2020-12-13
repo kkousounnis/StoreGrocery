@@ -1,15 +1,14 @@
 package Interfaces;
 
 import java.util.List;
-import models.ProcessedProductDTO;
-import models.Product;
+import models.ProcessesedProductListDTO;
 import models.ProductDTO;
 
 public interface IHuman {
     //Step if order 
-    List<ProductDTO> order(List<ProductDTO> shoppingList);
+    List<ProductDTO> order(GroceryStore store, List<ProductDTO> shoppingList);
     
-    void pays (List<ProcessedProductDTO> processedProductDTO, double totalAmount);
+    void pays (ProcessesedProductListDTO processesedShoppingLIst);
     
     
 }

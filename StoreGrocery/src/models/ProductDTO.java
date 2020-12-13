@@ -1,8 +1,10 @@
 package models;
 
+import Interfaces.IProductDTO;
+import java.util.List;
 import java.util.Objects;
 
-public class ProductDTO {
+public class ProductDTO implements IProductDTO{
 
     private Product product;
     private int quantity;
@@ -59,6 +61,21 @@ public class ProductDTO {
         sb.append(", quantity=").append(quantity);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public List<ProcessedProductDTO> processOrder(Human employee, Human customer, List<ProductDTO> shoppingList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double calculateTotal(List<ProcessedProductDTO> processedProductDTO) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ProcessesedProductListDTO payOrder(Human employee, Human CUstomer, List<ProcessedProductDTO> processedProductDTO, double totalAmount) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

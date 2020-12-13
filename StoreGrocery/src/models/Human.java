@@ -1,6 +1,9 @@
 package models;
 
-public class Human {
+import Interfaces.IHuman;
+import java.util.List;
+
+public class Human implements IHuman {
 
     private String name;
 
@@ -26,6 +29,17 @@ public class Human {
         sb.append('}');
         return sb.toString();
     }
-    
+
+    @Override
+    public List<ProductDTO> order(GroceryStore store, List<ProductDTO> shoppingList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+    @Override
+    public void pays(ProcessesedProductListDTO processesedShoppingLIst) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 }

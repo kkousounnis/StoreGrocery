@@ -3,6 +3,7 @@ package Interfaces;
 import java.util.List;
 import models.Human;
 import models.ProcessedProductDTO;
+import models.ProcessesedProductListDTO;
 import models.ProductDTO;
 
 public interface IProductDTO {
@@ -13,6 +14,6 @@ public interface IProductDTO {
 
     double calculateTotal(List<ProcessedProductDTO> processedProductDTO);
     
-    void payOrder(Human employee, Human CUstomer,
+    ProcessesedProductListDTO payOrder(Human employee, Human CUstomer,
             List<ProcessedProductDTO> processedProductDTO, double totalAmount);
 }
