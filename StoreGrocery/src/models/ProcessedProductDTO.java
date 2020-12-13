@@ -10,7 +10,7 @@ package models;
  * @author konstantinos
  */
 public class ProcessedProductDTO extends ProductDTO{
-    private double Amount;
+    private double amount;
 
     public ProcessedProductDTO() {
     }
@@ -20,11 +20,12 @@ public class ProcessedProductDTO extends ProductDTO{
     }
     
     public double getAmount() {
-        return this.getProduct().getPrice()*this.getQuantity();
+        this.setAmount(amount);
+        return this.amount;
     }
 
     public void setAmount(double Amount) {
-        this.Amount = Amount;
+        this.amount = this.getProduct().getPrice()*this.getQuantity();        
     }
     
     

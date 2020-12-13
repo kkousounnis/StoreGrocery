@@ -30,16 +30,20 @@ public class Human implements IHuman {
         return sb.toString();
     }
 
-    @Override
-    public List<ProductDTO> order(GroceryStore store, List<ProductDTO> shoppingList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 
     @Override
     public void pays(ProcessesedProductListDTO processesedShoppingLIst) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public List<ProductDTO> order(GroceryStore store, List<ProductDTO> shoppingList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 
     
 }
