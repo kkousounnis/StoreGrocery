@@ -27,7 +27,7 @@ public class StoreGrocery {
         GroceryStore grocery = new GroceryStore("John's grocery", john, products);
         
         List<ProductDTO> shoppingList = new ArrayList<>();
-        shoppingList.add(new ProductDTO(grocery.getProducts().get(0),3));
+        shoppingList.add(new ProductDTO(grocery.getProducts().get(0),2));
         shoppingList.add(new ProductDTO(grocery.getProducts().get(1),1));
         shoppingList.add(new ProductDTO(grocery.getProducts().get(2),3));
         

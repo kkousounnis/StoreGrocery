@@ -42,10 +42,23 @@ public class Human implements IHuman {
     @Override
     public List<ProductDTO> order(GroceryStore store, List<ProductDTO> shoppingList) {
         
-        List<ProductDTO> listproducts= new ArrayList<>();
+        List<ProductDTO> listproductsrequested= new ArrayList<>();
+        for(ProductDTO shoppinglist: shoppingList){
+            for (int i = 0; i < store.getProducts().size(); i++) {
+                if(shoppinglist.getProduct().equals(store.getProducts().get(i))) {
+                    System.out.print(shoppinglist.getProduct());
+                    System.out.print("+");
+                    System.out.println(store.getProducts().get(i));
+                    listproductsrequested.add(shoppinglist );
+                
+                }
+                
+            }
+            
+            
+        }
         
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return (listproductsrequested);
     }
 
     
