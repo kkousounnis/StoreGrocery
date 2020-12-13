@@ -1,6 +1,7 @@
 package models;
 
 import Interfaces.IHuman;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Human implements IHuman {
@@ -40,6 +41,10 @@ public class Human implements IHuman {
 
     @Override
     public List<ProductDTO> order(GroceryStore store, List<ProductDTO> shoppingList) {
+        
+        List<ProductDTO> listproducts= new ArrayList<>();
+        
+        
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
